@@ -41,7 +41,7 @@ class AdivinaElNumero
             entrada = Console.ReadLine();
             if (int.TryParse(entrada, out numero))
             {
-                if (numero < 10 && numero > 1)
+                if (numero < 10 && numero > 0)
                 {
                     numeroValido = true;
                 }

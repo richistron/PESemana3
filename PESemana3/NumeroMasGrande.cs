@@ -11,6 +11,7 @@ class NumeroMasGrande
 
     public void ComparaNumeros()
     {
+        Array.Sort(numeros);
         Array.Reverse(numeros);
         Console.WriteLine("El número más grade es {0}", numeros[0]);
     }

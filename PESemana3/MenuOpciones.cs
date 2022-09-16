@@ -2,16 +2,19 @@
 
 public class MenuOpciones
 {
-    private bool valido = false;
+    private bool valido;
+    private bool terminado;
 
     public void Iniciar()
     {
-        while (!valido)
+        while (!valido && !terminado)
         {
             Console.WriteLine("Elige una opción:");
             Console.WriteLine("\t 1) Adivina el número");
             Console.WriteLine("\t 2) Encuentra el número más grande con sort");
             Console.WriteLine("\t 3) Encuentra el número más grande con if y else");
+            Console.WriteLine("\t 4) Encuentra el número más grande con recursion");
+            Console.WriteLine("\t c) Cancelar");
             Opciones();
         }
     }
@@ -19,8 +22,6 @@ public class MenuOpciones
     private void Opciones()
     {
         string? opt = Console.ReadLine();
-
-        // TODO, numero mas grande array dinámico 
 
         switch (opt)
         {
@@ -40,6 +41,16 @@ public class MenuOpciones
                 valido = true;
                 NumeroMasGrandeIfElse numeroMasGrandeIfElse = new NumeroMasGrandeIfElse();
                 numeroMasGrandeIfElse.ComparaNumeros();
+                break;
+
+            case "4":
+                valido = true;
+                NumeroMasGrandeIlimitado numeroMasGrandeIlimitado = new NumeroMasGrandeIlimitado();
+                numeroMasGrandeIlimitado.ComparaNumeros();
+                break;
+
+            case "c":
+                terminado = true;
                 break;
 
             default:

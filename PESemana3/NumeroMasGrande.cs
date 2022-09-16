@@ -1,8 +1,8 @@
 ﻿namespace PESemana3;
 
-class NumeroMasGrande
+public class NumeroMasGrande
 {
-    private int[] numeros;
+    protected int[] numeros;
 
     public NumeroMasGrande()
     {

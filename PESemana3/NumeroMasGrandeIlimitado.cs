@@ -49,7 +49,7 @@ public class NumeroMasGrandeIlimitado
             }
             else
             {
-                Console.WriteLine("El valor '{0}' es inválido", entrada);
+                if (!terminado) Console.WriteLine("El valor '{0}' es inválido", entrada);
             }
         }
 

@@ -7,7 +7,6 @@ public class MenuOpciones
 
     public void Iniciar()
     {
-        string? input;
         while (!valido && !terminado)
         {
             Console.WriteLine("Elige una opción:");
@@ -16,8 +15,7 @@ public class MenuOpciones
             Console.WriteLine("\t 3) Encuentra el número más grande con if y else");
             Console.WriteLine("\t 4) Encuentra el número más grande con N cantidad de valores");
             Console.WriteLine("\t c) Cancelar");
-            input = Console.ReadLine();
-            Opciones(input);
+            Opciones(Console.ReadLine());
         }
     }
 

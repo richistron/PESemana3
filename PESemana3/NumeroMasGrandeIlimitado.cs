@@ -43,14 +43,8 @@ public class NumeroMasGrandeIlimitado
                 valido = true;
             }
 
-            if (int.TryParse(entrada, out numero))
-            {
-                valido = true;
-            }
-            else
-            {
-                if (!terminado) Console.WriteLine("El valor '{0}' es inválido", entrada);
-            }
+            if (int.TryParse(entrada, out numero)) valido = true;
+            else if (!terminado) Console.WriteLine("El valor '{0}' es inválido", entrada);
         }
 
         return numero;

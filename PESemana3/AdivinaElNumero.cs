@@ -22,10 +22,7 @@ class AdivinaElNumero
                 adivinado = true;
                 Console.WriteLine("Ganaste, has derrotado a la matrix");
             }
-            else
-            {
-                Console.WriteLine("Jaja, no puedes contra el algoritmo del ritmo");
-            }
+            else Console.WriteLine("Jaja, no puedes contra el algoritmo del ritmo");
         }
     }
 
@@ -41,19 +38,10 @@ class AdivinaElNumero
             entrada = Console.ReadLine();
             if (int.TryParse(entrada, out numero))
             {
-                if (numero < 10 && numero > 0)
-                {
-                    numeroValido = true;
-                }
-                else
-                {
-                    Console.WriteLine("el dato '{0}' ingresado no está en el rando del 1 al 10", numero);
-                }
+                if (numero < 10 && numero > 0) numeroValido = true;
+                else Console.WriteLine("el dato '{0}' ingresado no está en el rando del 1 al 10", numero);
             }
-            else
-            {
-                Console.WriteLine("el dato '{0}' ingresado no es un número entero", entrada);
-            }
+            else Console.WriteLine("el dato '{0}' ingresado no es un número entero", entrada);
         }
 
         return numero;

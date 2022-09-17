@@ -25,21 +25,12 @@ public class NumeroMasGrande
         {
             Console.WriteLine("Ingresa un número entero");
             input = Console.ReadLine();
-            try
+
+            if (int.TryParse(input, out num)) validNumber = true;
+            else
             {
-                num = int.Parse(input);
-                validNumber = true;
-            }
-            catch
-            {
-                if (input == null)
-                {
-                    Console.WriteLine("Debes ingresar un número");
-                }
-                else
-                {
-                    Console.WriteLine("'{0}' no es un número válido", input);
-                }
+                if (input == null) Console.WriteLine("Debes ingresar un número");
+                else Console.WriteLine("'{0}' no es un número válido", input);
             }
         }
 

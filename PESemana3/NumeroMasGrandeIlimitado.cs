@@ -33,16 +33,11 @@ public class NumeroMasGrandeIlimitado
         bool valido = false;
         int numero = 0;
 
-        while (!valido)
+        while (!valido && !terminado)
         {
             Console.WriteLine("Escribe un número o presiona 'c' para continuar");
             entrada = Console.ReadLine();
-            if (entrada == "c")
-            {
-                terminado = true;
-                valido = true;
-            }
-
+            if (entrada == "c") terminado = true;
             if (int.TryParse(entrada, out numero)) valido = true;
             else if (!terminado) Console.WriteLine("El valor '{0}' es inválido", entrada);
         }
